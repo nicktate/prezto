@@ -30,11 +30,16 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'autosuggestions' \
+  'syntax-highlighting' \
   'history' \
+  'history-substring-search' \
+  'tmux' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
+  'git' \
   'prompt'
 
 #
@@ -43,6 +48,7 @@ zstyle ':prezto:load' pmodule \
 
 # Set the query found color.
 # zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions' color 'yes'
 
 #
 # Completions
@@ -71,6 +77,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
+zstyle ':prezto:module:git:alias' skip 'yes'
 
 #
 # GNU Utility
@@ -209,7 +216,7 @@ zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 # Integrate with iTerm2.
-zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+zstyle ':prezto:module:tmux:iterm' integrate 'no'
 
 # Set the default session name:
 zstyle ':prezto:module:tmux:session' name 'Nick-Default-Session'
