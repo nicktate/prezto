@@ -34,6 +34,11 @@ export HISTFILE=~/.zsh_history  # ensure history file visibility
 export HSTR_CONFIG=hicolor        # get more colors
 bindkey -s "\C-r" "\eqhstr --\n" # bind hstr to Ctrl-r (for Vi mode check doc)
 
+# Kubectl
+alias k=kubectl
+alias ktx=kubectx
+alias kns=kubens
+
 # Kubectl prompt
 zstyle ':vcs_info:git*' formats "%{$fg[grey]%}%s %{$reset_color%}%r/%S%{$fg[grey]%} %{$fg[blue]%}%b%{$reset_color%}%m%u%c%{$reset_color%} "
 zstyle ':vcs_info:*' check-for-changes true
@@ -44,3 +49,5 @@ $python_info[virtualenv]${editor_info[keymap]} '
 if [[ -s "${ZDOTDIR:-$HOME}/.zsh/general.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zsh/general.zsh"
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
